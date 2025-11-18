@@ -11,6 +11,7 @@
             [4] = sci_b_uart_txi_isr, /* SCI8 TXI (Transmit data empty) */
             [5] = sci_b_uart_tei_isr, /* SCI8 TEI (Transmit end) */
             [6] = sci_b_uart_eri_isr, /* SCI8 ERI (Receive error) */
+            [7] = gpt_counter_overflow_isr, /* GPT0 COUNTER OVERFLOW (Overflow) */
         };
         #if BSP_FEATURE_ICU_HAS_IELSR
         const bsp_interrupt_event_t g_interrupt_event_link_select[BSP_ICU_VECTOR_NUM_ENTRIES] =
@@ -22,6 +23,7 @@
             [4] = BSP_PRV_VECT_ENUM(EVENT_SCI8_TXI,GROUP4), /* SCI8 TXI (Transmit data empty) */
             [5] = BSP_PRV_VECT_ENUM(EVENT_SCI8_TEI,GROUP5), /* SCI8 TEI (Transmit end) */
             [6] = BSP_PRV_VECT_ENUM(EVENT_SCI8_ERI,GROUP6), /* SCI8 ERI (Receive error) */
+            [7] = BSP_PRV_VECT_ENUM(EVENT_GPT0_COUNTER_OVERFLOW,GROUP7), /* GPT0 COUNTER OVERFLOW (Overflow) */
         };
         #endif
         #endif

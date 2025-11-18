@@ -1,1 +1,7 @@
-[]
+[
+ {
+  "path": "/packages/system/CherryECAT", 
+  "ver": "latest", 
+  "name": "CHERRYECAT"
+ }
+]

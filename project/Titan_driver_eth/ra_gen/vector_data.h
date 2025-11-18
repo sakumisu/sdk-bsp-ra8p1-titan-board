@@ -6,7 +6,7 @@
         #endif
                 /* Number of interrupts allocated */
         #ifndef VECTOR_DATA_IRQ_COUNT
-        #define VECTOR_DATA_IRQ_COUNT    (7)
+        #define VECTOR_DATA_IRQ_COUNT    (8)
         #endif
         /* ISR prototypes */
         void layer3_switch_gwdi_isr(void);
@@ -15,6 +15,7 @@
         void sci_b_uart_txi_isr(void);
         void sci_b_uart_tei_isr(void);
         void sci_b_uart_eri_isr(void);
+        void gpt_counter_overflow_isr(void);
 
         /* Vector table allocations */
         #define VECTOR_NUMBER_ETHER_GWDI0 ((IRQn_Type) 0) /* ETHER GWDI0 (GWCA Data Interrupt 0) */
@@ -31,8 +32,10 @@
         #define SCI8_TEI_IRQn          ((IRQn_Type) 5) /* SCI8 TEI (Transmit end) */
         #define VECTOR_NUMBER_SCI8_ERI ((IRQn_Type) 6) /* SCI8 ERI (Receive error) */
         #define SCI8_ERI_IRQn          ((IRQn_Type) 6) /* SCI8 ERI (Receive error) */
+        #define VECTOR_NUMBER_GPT0_COUNTER_OVERFLOW ((IRQn_Type) 7) /* GPT0 COUNTER OVERFLOW (Overflow) */
+        #define GPT0_COUNTER_OVERFLOW_IRQn          ((IRQn_Type) 7) /* GPT0 COUNTER OVERFLOW (Overflow) */
         /* The number of entries required for the ICU vector table. */
-        #define BSP_ICU_VECTOR_NUM_ENTRIES (7)
+        #define BSP_ICU_VECTOR_NUM_ENTRIES (8)
 
         #ifdef __cplusplus
         }
